@@ -15,7 +15,7 @@
           href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">
 
-       <meta name="theme-color" content="#478ac9">
+    <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Главная">
     <meta property="og:type" content="website">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
@@ -540,62 +540,183 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
          data-image-width="2000" data-image-height="1333">
     <div class="u-clearfix u-sheet u-sheet-1">
         <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1">
+
+            <form class="decor">
+                <style>
+                    body {
+                       background: #f69a73;
+                    }
+
+                    .decor {
+                       position: relative;
+                       max-width: 400px;
+                       margin: 50px auto 0;
+                       background: white;
+                       border-radius: 30px;
+                    }
+
+                    .form-left-decoration,
+                    .form-right-decoration {
+                       content: "";
+                       position: absolute;
+                       width: 50px;
+                       height: 20px;
+                       background: #f69a73;
+                       border-radius: 20px;
+                    }
+
+                    .form-left-decoration {
+                       bottom: 60px;
+                       left: -30px;
+                    }
+
+                    .form-right-decoration {
+                       top: 60px;
+                       right: -30px;
+                    }
+
+                    .form-left-decoration:before,
+                    .form-left-decoration:after,
+                    .form-right-decoration:before,
+                    .form-right-decoration:after {
+                       content: "";
+                       position: absolute;
+                       width: 50px;
+                       height: 20px;
+                       border-radius: 30px;
+                       background: white;
+                    }
+
+                    .form-left-decoration:before {
+                       top: -20px;
+                    }
+
+                    .form-left-decoration:after {
+                       top: 20px;
+                       left: 10px;
+                    }
+
+                    .form-right-decoration:before {
+                       top: -20px;
+                       right: 0;
+                    }
+
+                    .form-right-decoration:after {
+                       top: 20px;
+                       right: 10px;
+                    }
+
+                    .circle {
+                       position: absolute;
+                       bottom: 80px;
+                       left: -55px;
+                       width: 20px;
+                       height: 20px;
+                       border-radius: 50%;
+                       background: white;
+                    }
+
+                    .form-inner {
+                       padding: 50px;
+                    }
+
+                    .form-inner input,
+                    .form-inner textarea {
+                       display: block;
+                       width: 100%;
+                       padding: 0 20px;
+                       margin-bottom: 10px;
+                       background: #E9EFF6;
+                       line-height: 40px;
+                       border-width: 0;
+                       border-radius: 20px;
+                       font-family: 'Roboto', sans-serif;
+                    }
+
+                    .form-inner input[type="submit"] {
+                       margin-top: 30px;
+                       background: #f69a73;
+                       border-bottom: 4px solid #d87d56;
+                       color: white;
+                       font-size: 14px;
+                    }
+
+                    .form-inner textarea {
+                       resize: none;
+                    }
+
+                    .form-inner h3 {
+                       margin-top: 0;
+                       font-family: 'Roboto', sans-serif;
+                       font-weight: 500;
+                       font-size: 24px;
+                       color: #707981;
+                    }
+
+                    @media(max-width:480px) {
+
+                       .form-left-decoration,
+                       .form-right-decoration,
+                       .circle {
+                          display: none;
+                       }
+
+                       .form-inner {
+                          padding: 30px 20px;
+                       }
+
+                       .form-inner h3 {
+                          text-align: center;
+                       }
+                    }
+                </style>
+                <div class="form-left-decoration"></div>
+                <div class="form-right-decoration"></div>
+                <div class="circle"></div>
+                <div class="form-inner">
+                    <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Написать нам</h1>
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Сообщение..." rows="3"></textarea>
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+
+            <script>
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    var name = document.getElementById('name').value;
+                    var email = document.getElementById('email').value;
+                    var message = document.getElementById('message').value;
+                    if (name === '' || email === '' || message === '') {
+                        alert('Пожалуйста, заполните все поля формы.');
+                        return false;
+                    }
+                                       var formData = new FormData(this);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', this.getAttribute('action'));
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            document.getElementById('success-message').style.display = 'block';
+                            document.getElementById('contact-form').reset();
+                        }
+                    };
+                    xhr.send(formData);
+                });
+            </script>
             <h6>
-                <span style="line-height: 2;">"Наша команда специализируется на профессиональной установке и монтаже детского оборудования, обеспечивая безопасность и удобство для детей и их родителей. Мы предлагаем полный спектр услуг, начиная от консультации по выбору оборудования до его установки и гарантийного обслуживания. Наш опытный персонал обеспечит качественный и надежный монтаж, соответствующий всем требованиям безопасности и стандартам качества. Доверьте нам заботу о вашем детском пространстве, и мы сделаем</span>
+                <span class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Наша команда специализируется на профессиональной установке и монтаже детского оборудования, обеспечивая безопасность и удобство для детей и их родителей. Мы предлагаем полный спектр услуг, начиная от консультации по выбору оборудования до его установки и гарантийного обслуживания. Наш опытный персонал обеспечит качественный и надежный монтаж, соответствующий всем требованиям безопасности и стандартам качества.</span>
                 <span>
               <span class="u-text-black">&nbsp;</span>
             </span>
-                <span class="u-text-black">все</span>
-                <span class="u-text-white" style="line-height: 2;">&nbsp;</span>
-                <span style="line-height: 2;">возможное, чтобы оно стало идеальным местом для игр и развития вашего ребенка."</span>
+
             </h6>
 
             <h6>
-            <span style="line-height: 2;">"Мы предоставляем широкий спектр услуг в сфере монтажа и установки детского оборудования, а также реконструкции детских комплексов, включая:<br
-                    id="isPasted">Консультации и планирование: Наши эксперты проведут консультацию по выбору наиболее подходящего оборудования и разработают индивидуальный план монтажа и установки.<br>Монтаж детского оборудования: Наша квалифицированная команда произведет установку детских горок, качелей, каруселей и других элементов с соблюдением всех требований безопасности.<br>Тестирование и регулировка: После установки мы тщательно проверим каждый элемент оборудования, убедившись в его исправной работе, и произведем необходимые регулировки для максимальной безопасности и комфорта детей.<br>Реконструкция детского комплекса: При необходимости мы проведем реконструкцию уже существующего детского комплекса, включая замену устаревших элементов, модернизацию конструкций и улучшение безопасности." <span
+            <span class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Мы предоставляем широкий спектр услуг в сфере монтажа и установки детского оборудования, а также реконструкции детских комплексов.<br
+                    id="isPasted"><br><span
                     class="u-text-body-color" style="font-weight: 700;">&nbsp;</span>
-   <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Оставить заявку</h1>
-
-<form id="contact-form" action="send_email.php" method="post">
-    <label for="name">Имя:</label><br>
-    <input type="text" id="name" name="name" required><br>
-
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
-
-    <label for="message">Сообщение:</label><br>
-    <textarea id="message" name="message" required></textarea><br>    <button href="" class="u-align-center u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-1">Отправить </button>
-
-            </form>
-
-
-
-<script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Предотвращаем отправку формы по умолчанию
-
-        // Проверяем, все ли поля заполнены
-        if (document.getElementById('name').value === '' || document.getElementById('email').value === '' || document.getElementById('message').value === '') {
-            alert('Пожалуйста, заполните все поля формы.');
-            return false; // Прерываем выполнение функции, если не все поля заполнены
-        }
-
-        // Отправка данных формы через AJAX
-        var formData = new FormData(this);
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', this.getAttribute('action'));
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                document.getElementById('success-message').style.display = 'block';
-                <div id="success-message" class="success-message">Сообщение успешно отправлено!</div>
-                document.getElementById('contact-form').reset(); // Очищаем форму
-            }
-        };
-        xhr.send(formData);
-
-    });
-</script>
-
 
             </span>
             </h6>
