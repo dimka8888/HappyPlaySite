@@ -317,6 +317,56 @@
                     <style data-mode="SM"></style>
                     <style data-mode="XS"></style>
                 </div>
+
+                <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-11" data-image-width="2736"
+                     data-image-height="1509">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/image+/IMG_20230822_194328.jpg">
+                    </div>
+                    <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-11"></div>
+                    <style data-mode="XL"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM"></style>
+                    <style data-mode="XS"></style>
+                </div>
+
+                <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-12" data-image-width="2736"
+                     data-image-height="1509">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/image+/IMG_20230825_163653.jpg">
+                    </div>
+                    <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-12"></div>
+                    <style data-mode="XL"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM"></style>
+                    <style data-mode="XS"></style>
+                </div>
+                <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-13" data-image-width="2736"
+                     data-image-height="1509">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/image+/IMG_20231010_135401.jpg">
+                    </div>
+                    <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-13"></div>
+                    <style data-mode="XL"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM"></style>
+                    <style data-mode="XS"></style>
+                </div>
+                <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-14" data-image-width="2736"
+                     data-image-height="1509">
+                    <div class="u-back-slide">
+                        <img class="u-back-image u-expanded" src="images/image+/IMG_20231022_155503.jpg">
+                    </div>
+                    <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-14"></div>
+                    <style data-mode="XL"></style>
+                    <style data-mode="LG"></style>
+                    <style data-mode="MD"></style>
+                    <style data-mode="SM"></style>
+                    <style data-mode="XS"></style>
+                </div>
             </div>
             <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-hidden-sm u-hidden-xs u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1"
                href="#carousel-6848" role="button" data-u-slide="prev">
@@ -547,6 +597,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                        background: #f69a73;
                     }
 
+
                     .decor {
                        position: relative;
                        max-width: 400px;
@@ -677,10 +728,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     <h1 class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Написать нам</h1>
                     <input type="text" placeholder="Ваше имя">
                     <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Ваш город">
                     <textarea placeholder="Сообщение..." rows="3"></textarea>
                     <input type="submit" value="Отправить">
                 </div>
+
             </form>
+
 
             <script>
                 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -705,27 +759,83 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     xhr.send(formData);
                 });
             </script>
-            <h6>
-                <span class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Наша команда специализируется на профессиональной установке и монтаже детского оборудования, обеспечивая безопасность и удобство для детей и их родителей. Мы предлагаем полный спектр услуг, начиная от консультации по выбору оборудования до его установки и гарантийного обслуживания. Наш опытный персонал обеспечит качественный и надежный монтаж, соответствующий всем требованиям безопасности и стандартам качества.</span>
-                <span>
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Калькулятор стоимости монтажа</title>
+                <style>
+                    body {
+                       background: #f69a73;
+                    }
+
+                    .decor {
+                       position: relative;
+                       max-width: 400px;
+                       margin: 50px auto 0;
+                       background: white;
+                       border-radius: 30px;
+                       padding: 50px;
+                    }
+
+                    .decor input,
+                    .decor textarea {
+                       display: block;
+                       width: 100%;
+                       padding: 0 20px;
+                       margin-bottom: 10px;
+                       background: #E9EFF6;
+                       line-height: 40px;
+                       border-width: 0;
+                       border-radius: 20px;
+                       font-family: 'Roboto', sans-serif;
+                    }
+
+                    .decor input[type="submit"] {
+                       margin-top: 30px;
+                       background: #f69a73;
+                       border-bottom: 4px solid #d87d56;
+                       color: white;
+                       font-size: 14px;
+                    }
+
+                    .decor textarea {
+                       resize: none;
+                    }
+
+                    .decor h1 {
+                       text-align: center;
+                       font-family: 'Roboto', sans-serif;
+                       font-weight: bold;
+                       font-size: 24px;
+                       color: #707981;
+                       margin-top: 0;
+                    }
+                    @media(max-width:480px) {
+                       .decor {
+                          padding: 30px 20px;
+                       }
+                    }
+                </style>
+
+                <h6>
+                    <span class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Наша команда специализируется на профессиональной установке и монтаже детского оборудования, обеспечивая безопасность и удобство для детей и их родителей. Мы предлагаем полный спектр услуг, начиная от консультации по выбору оборудования до его установки и гарантийного обслуживания. Наш опытный персонал обеспечит качественный и надежный монтаж, соответствующий всем требованиям безопасности и стандартам качества.</span>
+                    <span>
               <span class="u-text-black">&nbsp;</span>
             </span>
 
-            </h6>
+                </h6>
 
-            <h6>
+                <h6>
             <span class="u-align-center u-custom-font u-font-lobster u-text u-text-1">Мы предоставляем широкий спектр услуг в сфере монтажа и установки детского оборудования, а также реконструкции детских комплексов.<br
                     id="isPasted"><br><span
                     class="u-text-body-color" style="font-weight: 700;">&nbsp;</span>
-
             </span>
-            </h6>
+                </h6>
         </div>
 
     </div>
-
 </section>
-
 
 <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-075f">
     <div class="u-clearfix u-sheet u-sheet-1">
